@@ -1,0 +1,35 @@
+header {
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #BFA360;
+
+    .container {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            color: inherit;
+            font-size: 32px;
+
+            font-weight: 900;
+        }
+    
+        nav {
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-columns: repeat(4, auto);
+
+            a {
+                color: inherit;
+                font-size: 24px;
+                text-decoration: none;
+            }
+        }
+    }
+}
