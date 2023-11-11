@@ -2,27 +2,27 @@
     background-color: #ACBF60;
 
     .container {
-        padding-top: 3%;
-        padding-bottom: 3%;
+        padding-top: 64px;
+        padding-bottom: 64px;
 
         h2 {
             color: #FFF;
-            text-align: center;
-            margin-bottom: 2%;
-            text-transform: uppercase;
         }
 
         form {
-
             display: block;
             margin: 0 auto;
-            max-width: 75%;
+            max-width: 680px;
 
             .form-grid {
                 display: grid;
                 grid-gap: 16px;
                 grid-template-columns: repeat(2, 1fr);
-                margin-bottom: 2%;
+                margin-bottom: 16px;
+
+                @media (max-width: 767px) {
+                    grid-template-columns: 1fr;
+                }
 
                 .form-element, .form-area {
                     appearance: none;
@@ -34,8 +34,9 @@
                     width: 100%;
                     background-color: #FFF;
                     border-radius: 8px;
-                    padding: 2%;
-                    font-size: 20px;
+                    
+                    padding: 16px;
+						font-size: 20px;
                     color: #313131;
 
                     &::placeholder {
@@ -50,7 +51,7 @@
             }
 
             .right-align {
-                text-align: center;
+                text-align: right;
             }
         }
     }

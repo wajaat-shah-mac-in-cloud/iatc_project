@@ -1,13 +1,12 @@
 section.banner {
-    // color: #B6B96E;
     color: #FFF;
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
 
-    position: relative;
     background-image: url('../../../assets/images/homepage.jpg');
-    background-position: center;
+    background-position: top right;
     background-size: cover;
 
     &:after  {
@@ -29,13 +28,22 @@ section.banner {
 
         h1 {
             font-size: 72px;
-            margin-bottom: 1%;
+            margin-bottom: 32px;
             text-transform: uppercase;
+
+            @media (max-width: 767px) {
+                font-size: 32px;
+            }
         }
 
         h3 {
             font-size: 36px;
             font-weight: 400;
+            margin-bottom: 32px;
+
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
         }
     }
 }
