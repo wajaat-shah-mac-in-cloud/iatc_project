@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit(): void {
     window.addEventListener('scroll', () => {
@@ -19,6 +21,7 @@ export class HeaderComponent implements OnInit {
       menuBtn.addEventListener('click', () => {
         menuBtn.classList.toggle('is-active');
         mobileMenu.classList.toggle('is-active');
+        this.setFixedHeader(mobileMenu.classList.contains('is-active'));
       });
     }
   }
@@ -36,4 +39,16 @@ export class HeaderComponent implements OnInit {
       }
     }
   }
+
+  private setFixedHeader(isMobileMenuActive: boolean): void {
+    const header = this.el.nativeElement.querySelector('header');
+    if (header) {
+      if (isMobileMenuActive) {
+        this.renderer.setStyle(header, 'position', 'fixed');
+      } else {
+        this.renderer.setStyle(header, 'position', 'absolute');
+      }
+    }
+  }
+
 }
