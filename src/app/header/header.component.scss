@@ -42,11 +42,11 @@ header {
                 color: inherit;
                 font-size: 20px;
                 text-decoration: none;
-                transition: font-size 1s ease-in-out;
+                transition: font-size 0.5s ease-in-out;
 
                 &:hover {
                     font-weight: bold;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
             }
         }
