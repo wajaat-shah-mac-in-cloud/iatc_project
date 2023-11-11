@@ -13,45 +13,58 @@
             display: block;
             margin: 0 auto;
             max-width: 680px;
-
+          
             .form-grid {
-                display: grid;
-                grid-gap: 16px;
-                grid-template-columns: repeat(2, 1fr);
-                margin-bottom: 16px;
-
-                @media (max-width: 767px) {
-                    grid-template-columns: 1fr;
+              display: grid;
+              grid-gap: 16px;
+              grid-template-columns: repeat(2, 1fr);
+              margin-bottom: 16px;
+          
+              @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+              }
+          
+              .form-element,
+              .form-area {
+                appearance: none;
+                border: none;
+                outline: none;
+                background: none;
+          
+                display: block;
+                width: 100%;
+                background-color: #FFF;
+                border-radius: 8px;
+          
+                padding: 16px;
+                font-size: 20px;
+                color: #313131;
+          
+                &::placeholder {
+                  color: #AAA;
                 }
-
-                .form-element, .form-area {
-                    appearance: none;
-                    border: none;
-                    outline: none;
-                    background: none;
-
-                    display: block;
-                    width: 100%;
-                    background-color: #FFF;
-                    border-radius: 8px;
-                    
-                    padding: 16px;
-						font-size: 20px;
-                    color: #313131;
-
-                    &::placeholder {
-                        color: #AAA;
-                    }
-
-                }
-
-                .form-area {
-                    grid-column: 1/-1;
-                }
+              }
+          
+              #subject {
+                grid-row: 1;
+                grid-column: 1 / -1;
+              }
+          
+              #name,
+              #email {
+                grid-row: 2;
+              }
+          
+              #message {
+                grid-row: 3;
+                grid-column: 1 / -1;
+                min-height: 200px;
+                resize: vertical;
+              }
             }
-
+          
             .right-align {
-                text-align: right;
+              text-align: right;
             }
         }
     }
