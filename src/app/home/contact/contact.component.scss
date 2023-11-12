@@ -2,70 +2,85 @@
     background-color: #ACBF60;
 
     .container {
-        padding-top: 64px;
-        padding-bottom: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 
-        h2 {
-            color: #FFF;
-        }
-
-        form {
-            display: block;
-            margin: 0 auto;
-            max-width: 680px;
-          
-            .form-grid {
-              display: grid;
-              grid-gap: 16px;
-              grid-template-columns: repeat(2, 1fr);
-              margin-bottom: 16px;
-          
-              @media (max-width: 767px) {
-                grid-template-columns: 1fr;
-              }
-          
-              .form-element,
-              .form-area {
-                appearance: none;
-                border: none;
-                outline: none;
-                background: none;
-          
-                display: block;
-                width: 100%;
-                background-color: #FFF;
-                border-radius: 8px;
-          
-                padding: 16px;
-                font-size: 20px;
-                color: #313131;
-          
-                &::placeholder {
-                  color: #AAA;
-                }
-              }
-          
-              #subject {
-                grid-row: 1;
-                grid-column: 1 / -1;
-              }
-          
-              #name,
-              #email {
-                grid-row: 2;
-              }
-          
-              #message {
-                grid-row: 3;
-                grid-column: 1 / -1;
-                min-height: 200px;
-                resize: vertical;
-              }
-            }
-          
-            .right-align {
-              text-align: right;
-            }
-        }
+    h2 {
+        color: #FFF;
     }
+
+    form {
+      display: block;
+      margin: 0 auto;
+      max-width: 680px;
+    
+      .form-grid {
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 16px;
+    
+        .form-element,
+        .form-area {
+          appearance: none;
+          border: none;
+          outline: none;
+          background: none;
+    
+          display: block;
+          width: 100%;
+          background-color: #FFF;
+          border-radius: 8px;
+    
+          padding: 16px;
+          font-size: 20px;
+          color: #313131;
+    
+          &::placeholder {
+            color: #AAA;
+          }
+        }
+    
+        #subject {
+          grid-row: 1;
+          grid-column: 1 / -1;
+        }
+    
+        #name,
+        #email {
+          grid-row: 2;
+        }
+    
+        #message {
+          grid-row: 3;
+          grid-column: 1 / -1;
+          min-height: 200px;
+          resize: vertical;
+        }
+
+        @media (max-width: 768px) {
+          #name {
+            grid-row: 2;
+            grid-column: 1 / -1;
+          }
+
+          #email {
+            grid-row: 3;
+            grid-column: 1 / -1;
+          }
+      
+          #message {
+            grid-row: 4;
+            grid-column: 1 / -1;
+            min-height: 200px;
+            resize: vertical;
+          }
+        }
+      }
+          
+      .right-align {
+        text-align: right;
+      }
+    }
+  }
 }

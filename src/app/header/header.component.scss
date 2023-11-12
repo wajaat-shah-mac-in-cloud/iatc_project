@@ -5,6 +5,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 99;
+    transition: background-color 1s ease;
 
     @media (max-width: 767px) {
         position: absolute;
@@ -53,7 +54,8 @@ header {
     }
 
     &.is-scrolling {
-        background-color: #BFA360;
+      background-color: #BFA360;
+      transition: background-color 1.2s ease;
     }
 }
 
