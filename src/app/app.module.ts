@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { BannerComponent } from './home/banner/banner.component';
 import { PrayersComponent } from './home/prayers/prayers.component';
 import { ContactComponent } from './home/contact/contact.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ContactComponent } from './home/contact/contact.component';
     BannerComponent,
     PrayersComponent,
     ContactComponent,
+    ScrollToTopComponent,
   ],
   imports: [
     BrowserModule,
