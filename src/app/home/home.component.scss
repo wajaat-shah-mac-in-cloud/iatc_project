@@ -1,3 +1,35 @@
 main {
-    
+    .back-to-top {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #8BB55C;
+		border-radius: 0.5rem;
+		padding: 2px;
+		text-decoration: none;
+		transition: 0.2s ease-out;
+
+		@media (max-width: 768px) {
+			background-color: green;
+		}
+
+		span {
+			color: #FFF;
+			font-size: 3rem;
+			transition: 0.2s ease-out;
+
+			@media (max-width: 768px) {
+				font-size: 1.5rem;
+			}
+		}
+
+		@media (min-width: 769px) {
+			&:hover {
+				background-color: green;
+			}	
+		}
+	}
 }

@@ -10,41 +10,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-body {
-	.back-to-top {
-		position: fixed;
-		bottom: 2rem;
-		right: 2rem;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #8BB55C;
-		border-radius: 0.5rem;
-		padding: 2px;
-		text-decoration: none;
-		transition: 0.2s ease-out;
-
-		@media (max-width: 768px) {
-			background-color: green;
-		}
-
-		span {
-			color: #FFF;
-			font-size: 3rem;
-			transition: 0.2s ease-out;
-
-			@media (max-width: 768px) {
-				font-size: 1.5rem;
-			}
-		}
-
-		@media (min-width: 769px) {
-			&:hover {
-				background-color: green;
-			}	
-		}
-	}
-}
+body {}
 
 .container {
     width: 100%;
@@ -102,6 +68,11 @@ section {
 	text-transform: uppercase;
 	font-weight: 700;
 	cursor: pointer;
+
+	&:hover {
+		background-color: green;
+		transition: background-color 0.8s ease;
+	}
 
     @media (max-width: 767px) {
 		font-size: 18px;
