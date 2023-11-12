@@ -74,7 +74,8 @@ section {
 		transition: background-color 0.8s ease;
 	}
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
+		background-color: green;
 		font-size: 18px;
 	}
 }
