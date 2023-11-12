@@ -33,6 +33,7 @@ section.banner {
 
             @media (max-width: 767px) {
                 font-size: 32px;
+                margin-bottom: 10px;
             }
         }
 
@@ -44,6 +45,36 @@ section.banner {
             @media (max-width: 767px) {
                 font-size: 20px;
             }
+        }
+    }
+
+    .time-till {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        h3 {
+            text-align: end;
+            margin-bottom: 2rem;
+            margin-right: 4rem;
+            font-weight: 300;
+            font-size: 32px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+
+            @media (max-width: 768px) {
+                margin-bottom: 1rem;
+                margin-right: 1rem;
+                font-size: 18px;
+            }
+        }
+
+        .title {
+            margin-bottom: 0.2rem;
+        }
+
+        .timer {
+            text-align: center;
         }
     }
 }
