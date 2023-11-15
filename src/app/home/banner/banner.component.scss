@@ -53,6 +53,7 @@ section.banner {
         bottom: 0;
         right: 0;
         z-index: 1;
+        margin-bottom: 3rem;
 
         h3 {
             text-align: end;
@@ -60,7 +61,7 @@ section.banner {
             margin-right: 4rem;
             font-weight: 300;
             font-size: 32px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+            text-shadow: 0 0 10px rgb(255, 191, 94);
 
             @media (max-width: 768px) {
                 margin-bottom: 1rem;
